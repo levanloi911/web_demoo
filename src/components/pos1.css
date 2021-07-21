@@ -1,0 +1,38 @@
+.pos1{
+    background-color:  rgba(15, 154, 247, 0.74);
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+.pos1_content{
+    width: 70%;
+    margin: 0px auto;
+    height: 150px;
+    overflow: auto;
+    display: flex;
+}
+.pos1_title{
+    width: 30%;
+    margin: 20px;
+    margin-left: 0;
+    overflow: auto;
+
+}
+.pos1_category{
+    width: 70%;
+    overflow: auto;
+}
+.pos1_border{
+    border: 2px ;
+    padding: 10px;
+    border-radius: 30px 5px; 
+    margin: 10px;
+    max-height: 120px;
+    background-color: rgb(253, 253, 253);
+    overflow: auto;
+    display: flex;
+}
+.pos1_div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,23 @@
+.container_swiper{
+    width: 100%;
+    
+}
+
+.SwiperSlide{
+    line-height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.SwiperSlide>img{
+    display: block; margin-left: auto; margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.image >img{
+    width: 100%;
+    max-width: 100%;
+}
+
+p{
+    float: left;
+}
