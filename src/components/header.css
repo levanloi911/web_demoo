@@ -1,56 +1,59 @@
-.logo{
-    width: 300px;
-}
 .container{
-    width: 70%;
-    height: 100%;
+    display: flex;
+    margin: auto;
+    width: 80%;
 }
-
-.header{
-    display: inline-block;
+.header_wrapper{
+    width: 100%;
 }
-.calendar{
-    position: absolute;
-    left: 0px;
-}
-.left{
-    float: left;
-    width: 700px;
+.logo{
+    width: 30%;
+    height: auto;
     
 }
-.logo{
-    float: left;
-    padding-left: 30px
-
-}
-.d-flex{
-    float: right;
-    padding-left: 30px;
-
-    margin: auto;
-}
-.right{
-    float: right;
-    width: 400px;
+.header_flex{
+   width: 35%; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
 }
 .header_calendar{
-    position: relative;
-    float: left;
-    padding-left: 30px;
-    text-align: right;
-}
-.icon_calendar{
-   position: absolute;
-   left: 0; 
-   margin-right: 100px;
+  text-align: center;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header_phone{
-    position: relative;
-    float: right;
-    padding-left: 30px
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Mobile with < 740px */
+@media only screen and (max-width : 46.1875em) {
+    .header_phone,
+    .header_calendar,
+    .from_search {
+        display: none;
+    }
+    .logo{
+        width: 90%;
+    }
 
+    
+    }
+
+/* tablet with >=740px and width <1024 */
+@media only screen and (min-width : 740px) and (max-width : 1023px) {
+    .header_phone,
+    .header_calendar{
+        display: none;
+    }
+    .logo,
+    .header_flex{
+        width: 50%;
+    }
 }
-.icon_phone{
-    position: absolute;
-    left: 0;
-}
+   
