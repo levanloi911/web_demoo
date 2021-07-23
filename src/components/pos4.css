@@ -1,0 +1,136 @@
+.pos4{
+    width: 100%;
+}
+.pos4_container{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pos4_form{
+    width: 100%;
+}
+.pos4_left{
+    width: calc(100% - 160px);
+    float: left;
+    margin: 5px;
+}
+.pos4_right{
+    float: right;
+    width: 140px;
+    margin: 5px;
+    background-color: rgb(255, 167, 4);
+    border: 1px;
+    border-radius: 5px;
+    height: 130px;
+}
+.pos4_right:hover{
+    background-color: rgb(15, 156, 250);
+    transition: background-color 1000ms linear
+}
+.pos4_top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+.pos4_top1{
+    width: calc(30% - 4px);
+    margin: 2px;
+}
+.pos4_top2{
+    width: calc(30% - 4px);
+    margin: 2px;
+}
+.pos4_top3{
+    width: calc(40% - 4px);
+    margin: 2px;
+}
+.pos4_mid{
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+.pos4_mid1{
+    width: calc(25% - 4px);
+    margin: 2px;
+}
+.pos4_mid2{
+    width: calc(25% - 4px);
+    margin: 2px;
+}
+.pos4_mid3{
+    width: calc(25% - 4px);
+    margin: 2px;
+}
+.pos4_mid4{
+    width: calc(25% - 4px);
+    margin: 2px;
+}
+.pos4_end{
+    height: 35px;
+    width: calc(100% - 4px );
+    margin: 2px;
+}
+@media only screen and (min-width : 740px) and (max-width : 1023px) {
+   .pos4_left,
+   .pos4_right{
+       float: none;
+   }
+   .pos4_right{
+    height: 40px;
+    width: 300px;
+}
+   .pos4_left{
+       width: 100%;
+   }
+.pos4_top, .pos4_mid{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+    text-align: left;
+}
+.pos4_top1,
+.pos4_top2,
+.pos4_top3,
+.pos4_mid1,
+.pos4_mid2,
+.pos4_mid3,
+.pos4_mid4{
+    width: 100%;
+    height: 35px;
+
+}
+}
+
+@media only screen and (max-width : 46.1875em) {
+    .pos4_left,
+   .pos4_right{
+       float: none;
+   }
+   .pos4_left{
+       width: calc(100% - 10px);
+   }
+.pos4_top, .pos4_mid{
+    display: block;
+    height: auto;
+    text-align: left;
+}
+.pos4_container{
+    width: 100%;
+}
+.pos4_top1,
+.pos4_top2,
+.pos4_top3,
+.pos4_mid1,
+.pos4_mid2,
+.pos4_mid3,
+.pos4_mid4{
+    width: calc(100% );
+    height: 35px;
+
+}
+.pos4_right{
+    height: 40px;
+}
+    
+}

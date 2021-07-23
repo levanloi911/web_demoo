@@ -44,7 +44,6 @@
 }
 p{
     display: -webkit-box;
-    padding: 5px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;

@@ -3,7 +3,8 @@
     width: 100%;
 }
 .pos3_container{
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 80%;
     margin: auto;
 }

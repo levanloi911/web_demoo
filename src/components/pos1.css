@@ -32,7 +32,6 @@
 .pos1_div{
     margin-top:20px;
     margin-bottom:20px;
-
     width: 25%;
     display: flex;
     justify-content: center;
@@ -45,10 +44,18 @@
 .pos1_content,.pos1_div{
     flex-direction: column;
 }
-.pos1_title,
+.pos1_title>svg{
+    display: none;
+}
+.pos1_title{
+    width: 100%;
+    padding-top: 10px;
+    display: block;
+}
 .pos1_content,
 .pos1_category{
     width: 100%;
+    justify-content: center;
 }
 
 .text{

@@ -1,8 +1,10 @@
-import { Button, Form, FormControl, Image } from "react-bootstrap"
+import {  Form, FormControl, Image } from "react-bootstrap"
 import SearchIcon from '@material-ui/icons/Search';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import PhoneIcon from '@material-ui/icons/Phone';
 import './header.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Header=()=>{
     return(
         <div  className ='header_wrapper'>
