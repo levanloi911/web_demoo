@@ -1,0 +1,23 @@
+.footer{
+    width: 100%;
+}
+.footer_container{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+.footer_grid{
+    display: grid;
+    max-height: 200px;
+    overflow: scroll;
+    grid-template-columns: auto auto auto auto;
+}
+@media screen and (max-width: 739px) {
+    .footer_grid{
+        display: block;
+    } 
+    .footer_container{
+        width: 100%;
+    }
+      
+  }

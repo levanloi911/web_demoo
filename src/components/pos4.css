@@ -125,7 +125,7 @@
 .pos4_mid2,
 .pos4_mid3,
 .pos4_mid4{
-    width: calc(100% );
+    width: 100%;
     height: 35px;
 
 }
