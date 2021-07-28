@@ -12,12 +12,12 @@ width: 100%;
 
 }
 .pos6_box{
-    border: 10px;
+    border: 1px solid #ddd;
     margin: 4px;
     min-width: 300px;
     padding: 20px;
     border-radius: 5px;
-    background-color: rgb(236, 229, 229);
+    background-color: #fff;
 }
 .pos6_profile_box{
     min-width: 300px;
@@ -35,9 +35,35 @@ width: 100%;
 .pos6_text{
     font-size: 13px;
 }
+
+.vplayer{
+    margin: auto;
+   margin-top: 20px;
+}
+.pos6_grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.pos6_grid >img,.pos6_grid >div {
+    padding:  10px;
+}
+.pos6_image{
+    margin-top: 20px;
+}
 @media screen and (max-width: 1023px) {
     .pos6_container{
         width: 100%;
+        
     }
-    
+    .pos6_grid >img,.pos6_grid >div {
+        padding:  2px;
+    }
+   
 }
+@media screen and (max-width: 739px) {
+    .pos6_grid{
+        display: block;
+    } 
+    
+      
+  }
