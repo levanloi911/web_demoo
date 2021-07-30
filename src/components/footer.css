@@ -6,11 +6,21 @@
     margin: auto;
     text-align: left;
 }
+.footer_content{
+    margin: 10px;
+}
 .footer_grid{
     display: grid;
     max-height: 200px;
     overflow: scroll;
     grid-template-columns: auto auto auto auto;
+}
+.footer_text1{
+    font-size: 13px;
+    font-weight: 700;
+}
+.footer_text2{
+    font-size: 13px
 }
 @media screen and (max-width: 739px) {
     .footer_grid{

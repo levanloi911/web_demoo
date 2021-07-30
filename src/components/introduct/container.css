@@ -1,0 +1,40 @@
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.i_title{
+    text-align: left;
+}
+.canvar {
+    width: calc(100% - 37px);
+    height: 14px;
+    clip-path: polygon(2% 0, 91% 0, 100% 95%, 0 79%, 1% 63%);
+    background: #0088de;
+    background: linear-gradient(
+90deg
+, #0088de 0%, #71b7e3 100%);
+    float: right;
+    margin-top: 10px;
+}
+.i_content1{
+    margin-top: 20px;
+}
+.i_content1_box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 40px;
+}
+.box{
+    text-align: left;
+    margin: 5px;
+    border-bottom: 1px solid gray;
+}
+
+@media only screen and (max-width : 1023px) {
+   .i_content1_box{
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 40px;
+} 
+}
+

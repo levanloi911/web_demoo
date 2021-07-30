@@ -37,10 +37,14 @@ img{
     left: 9%;
     transform: translateX(-50%);
 }
+.pos3_title{
+ font-weight: 700;
+}
 .pos3_content >div{
     margin-left: 100px;
     text-align: left;
     font-size: 20px;
+   
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 3;

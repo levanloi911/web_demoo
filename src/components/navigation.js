@@ -1,68 +1,47 @@
 import './navigation.css'
 import HomeIcon from '@material-ui/icons/Home';
+import React, { useEffect, useState } from 'react'
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
-function Navigation(){
+import { Link } from 'react-router-dom';
+function Navigation(props){
+    const [colormenu, setcolormenu] = useState('')
+      const[category_filter, setcategory] = useState([])
+       function filter() {
+            const post_new= (props.category?props.category:[]).map((ct)=>{
+                    const selectedPosts =props.category1 && props.category1.length &&props.category1.filter((item) => item.id_C=== ct.id);
+                        return {
+                            ...ct,
+                            posts: selectedPosts
+                        }})
+                    setcategory(post_new)
+        } 
+console.log(category_filter )
+useEffect(()=>{
+    filter();
+}, props.category1&&props.category)
     return(
         <div className='div_nav'>
             <ul>
-                <li><a className="active" href="#home">		<HomeIcon/> 	</a></li>
-                <li><a href="#home">		Giới thiệu 	</a></li>
-                <li><a href="#news">		Dịch vụ 	</a>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                <li   onClick={()=>{setcolormenu("home")}}>
+                        <Link   className="active" href="#home" to={`/`} 
+                        style = {  colormenu === "home" ? {color: '#9f224e', borderBottom: '1px solid red' } : {}}>                        
+                            <HomeIcon/></Link>
+                             </li>
+                {category_filter? category_filter.map(ct=>(
+                <li  onClick={()=>{setcolormenu(ct.id)}}>
+                    <Link   active  style = {  colormenu === ct.id ? {color: '#9f224e', borderBottom: '1px solid red' } : {}
+                                }  to={`/${ct.id}/${ct.id}`} >  {ct.name}   </Link>
+                                 <div className="dropdown-content">
+                                {(ct.posts?ct.posts:[]).map(item=>(
+                                    <a href="#">{item.name}</a>
+                                ))}
+                            </div>
                 </li>
-                <li><a href="#contact">		Linh kiện 	</a>
-                     <div className="dropdown-content">
-                        <a href="#">Link 4</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <li><a href="#about">		Phụ kiện 	</a>
-                     <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <li><a href="#about">		Tin tức 	</a>
-                     <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <li><a href="#about">		Laptop 	</a>
-                     <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>  
-                </li>
-                <li><a href="#about">		Báo giá 	</a>
-                <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <li><a href="#about">		Đặt lịch 	</a>
-                <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <li><a href="#about">		Liên hệ 	</a>
-                <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
+                )
+
+                ): ""}
+               
+              
 
 
                 <li className='nav_shopping'><a href="#about"><AddShoppingCartOutlinedIcon/>	Giỏ hàng 	</a></li>

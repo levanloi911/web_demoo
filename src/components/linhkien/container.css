@@ -1,0 +1,109 @@
+.container{
+    width: 80%;
+}
+.SwiperSlide_pos2{
+    position: relative;
+}
+.name{
+    position: absolute;
+    z-index: 1;
+    margin: 5px;
+    padding: 5px;
+    background-color: (0,0,0,0.1);
+    text-align: center;
+    width: 60%;
+    margin: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    
+}
+.list{
+    display: flex;
+}
+.list >a{
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid blue;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.list >a :not(:first-child){
+    border:none
+}
+.product{
+    display: flex;
+    margin-top: 20px;
+}
+.hangsx{
+    width: 20%;
+    height: fit-content;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.hangsx >div{
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+
+.sanpham{
+    width: calc(80% - 10px);
+    margin-left: 10px;
+    background-color: aliceblue;
+}
+.top_title{
+  margin: 10px;
+  height: 50px;
+
+}
+.title{
+float: left;
+}
+.filter{
+    float: right;
+}
+.grid_sanpham{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.grid_sanpham >div{
+    margin: 5px;
+    text-align: left;
+    border-bottom-style: solid;
+}
+.name_product,.default_price,.price{
+    cursor: pointer;
+}
+.price{
+    color: red;
+}
+@media only screen and (max-width : 1023px) {
+.container{
+    width: 100%;
+}
+.product{
+    flex-direction: column;
+    margin-top: 20px;
+}
+.hangsx{
+    width: 100%;
+}
+.sanpham{
+    width: calc(100%);
+    margin-left: 0px; 
+    margin-top: 10px;
+}
+.grid_sanpham{
+    grid-template-columns: auto auto;
+}
+.list{
+    display: block;
+}
+.name{
+    margin: 0px;
+}
+}

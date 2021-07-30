@@ -2,53 +2,32 @@ import { Button, Image } from 'react-bootstrap'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import VPlayer from 'react-vplayer';
 import './pos6.css'
- function Pos6(){
+ function Pos6(props){
      return(
          <div className='pos6'>
+           {props.homepage&&props.homepage.map(item=>(
              <div className='pos6_container'>
                 <p>Khách hàng nói về chúng tôi</p>
                 <div className='pos6_content'>
-                     <div className='a'>
+                  {item.danhgia&&item.danhgia.slice(0,3).map(item_d=>(
+                    <div>
                         <div className='pos6_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/4c0d4f066b2d9673cf3c_1592369154.jpg'></Image>
-                            <p>Việc tử tế, người tử tế, và một doanh nghiệp sửa chữa máy tính uy tín - Sửa chữa laptop 24h Tuần vừa rồi, máy tính của</p>
+                            <Image src={item_d.img}></Image>
+                            <p className="pos6_text_content">{item_d.content}</p>
                         </div>
                         <div className='pos6_profile_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/untitled-7_1616826140.jpg.webp'></Image>
+                            <Image src={item_d.imguser}></Image>
                             <div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
+                                <div className='pos6_text'>{item_d.username}</div>
+                                <div className='pos6_text1'>Việc tử tế, người tử tế</div>
                             </div>
                         </div>
                      </div>
 
-                     <div className='a'>
-                        <div className='pos6_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/4c0d4f066b2d9673cf3c_1592369154.jpg'></Image>
-                            <p>Việc tử tế, người tử tế, và một doanh nghiệp sửa chữa máy tính uy tín - Sửa chữa laptop 24h Tuần vừa rồi, máy tính của</p>
-                        </div>
-                        <div className='pos6_profile_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/untitled-7_1616826140.jpg.webp'></Image>
-                            <div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
-                            </div>
-                        </div>
-                     </div>
-
-                     <div>
-                        <div className='pos6_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/4c0d4f066b2d9673cf3c_1592369154.jpg'></Image>
-                            <p>Việc tử tế, người tử tế, và một doanh nghiệp sửa chữa máy tính uy tín - Sửa chữa laptop 24h Tuần vừa rồi, máy tính của</p>
-                        </div>
-                        <div className='pos6_profile_box'>
-                            <Image src='https://suachualaptop24h.com/images/testimonials/resized/untitled-7_1616826140.jpg.webp'></Image>
-                            <div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
-                                <div className='pos6_text'>Việc tử tế, người tử tế</div>
-                            </div>
-                        </div>
-                     </div>
+                  ))}
+                   
+                  
+                  
                  </div>
                 <Button   variant="outline-info" > xem thêm <ArrowRightAltIcon color='action'/> </Button>
            <div className='pos6_image'>
@@ -97,38 +76,27 @@ import './pos6.css'
                         quality: 360
                       }
                     ]}/>
-                    <h4> title: video</h4>
+                    <h4>Video Demo</h4>
                 </div>
             </div>
 
             <div className='pos6_image'>
              <h3>CÁC HOẠT ĐỘNG VÌ CỘNG ĐỒNG</h3>
-          
                 <div className='pos6_grid'>
+                  {item.hoatdong&&item.hoatdong.slice(0,3).map(item_h=>(
                   <div>
-                      <Image src='https://suachualaptop24h.com/images/albums/resized/ung-ho-bac-giang-chong-dich-covid-19-2_1622600287.jpg.webp'/>
-                      <h3>Khách hàng trên toàn hệ thống ủng hộ quỹ phòng chống dịch COVID tại Bắc Giang</h3>
-                      <div>Trước tình hình diễn biến dịch căng thẳng tại Bắc Giang, Sửa chữa Laptop 24h .com phát động chiến dịch gây quỹ</div>
+                      <Image src={item_h.img}/>
+                      <h3 className='pos6_title'>{item_h.title}</h3>
+                      <div className='pos6_content'>{item_h.content}</div>
                   </div>
-                  <div>
-                      <Image src='https://suachualaptop24h.com/images/albums/resized/ung-ho-bac-giang-chong-dich-covid-19-2_1622600287.jpg.webp'/>
-                      <h3>Khách hàng trên toàn hệ thống ủng hộ quỹ phòng chống dịch COVID tại Bắc Giang</h3>
-                      <div>Trước tình hình diễn biến dịch căng thẳng tại Bắc Giang, Sửa chữa Laptop 24h .com phát động chiến dịch gây quỹ</div>
-                  </div>
-                  <div>
-                      <Image src='https://suachualaptop24h.com/images/albums/resized/ung-ho-bac-giang-chong-dich-covid-19-2_1622600287.jpg.webp'/>
-                      <h3>Khách hàng trên toàn hệ thống ủng hộ quỹ phòng chống dịch COVID tại Bắc Giang</h3>
-                      <div>Trước tình hình diễn biến dịch căng thẳng tại Bắc Giang, Sửa chữa Laptop 24h .com phát động chiến dịch gây quỹ</div>
-                  </div>
-                  
-                 
-
-                </div>
+                  ))}
+                    
+                   </div>
                 <Button  variant="outline-info" > xem thêm <ArrowRightAltIcon color='action'/> </Button>
             </div>
 
              </div>
-            
+              ))}
          </div>
      )
  }

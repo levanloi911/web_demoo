@@ -4,3 +4,6 @@
 p{
   text-transform: capitalize;
 }
+svg{
+  cursor: pointer;
+}
